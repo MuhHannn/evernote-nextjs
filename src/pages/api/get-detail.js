@@ -15,7 +15,7 @@ export default async function handler(req, res) {
 
   // get data
   try {
-    const result = await sql`SELECT * FROM todos_ppqita WHERE id = ${id}`;
+    const result = await sql`SELECT * FROM evernote WHERE id = ${id}`;
     return res.status(200).json({ message: "success", data: result.rows[0] });
   } catch (error) {
     console.error("Error fetching todo:", error.message);

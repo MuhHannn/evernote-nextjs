@@ -3,36 +3,39 @@ import { useEffect, useState } from "react";
 
 export default function Home() {
   const router = useRouter();
-  const [dataDetail, setDetail] = useState(); // undefuned
+  const [dataDetail, setDetail] = useState({}); // initialize with an empty object
 
   const { idDetail } = router.query;
 
   useEffect(() => {
     if (!idDetail) return;
 
-    fetch(`/api/detail?id=${idDetail}`)
+    fetch(`/api/get-detail?id=${idDetail}`)
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
         if (!data.data) {
           setDetail(null);
-          return; // jika dijalankan maka stop step selanjutnya
+        } else {
+          setDetail(data.data);
         }
-        setDetail(data.data);
       });
-  }, [idDetail]);
+  }, []); // specify an empty dependency array
 
   return (
     <div>
-      {dataDetail === undefined && <p>Loading...</p>}
       {dataDetail === null && <p>Data Kosong</p>}
       {dataDetail && (
-        <p>
-          Ini Halaman Detail: <br /> Todo: {dataDetail.todo} <br /> ID:{" "}
-          {dataDetail.id} <br /> Created: {dataDetail.created_at} <br /> Status:{" "}
-          {dataDetail.status.toString()}
-        </p>
+        <div>
+          Ini Halaman Detail:
+          <p>ID: {dataDetail.id}</p>
+          <p>Title: {dataDetail.title}</p>
+          <p>Contain: {dataDetail.contain}</p>
+          <p>Created: {dataDetail.created_at} </p>
+          <p>Updated: {dataDetail.upload_at} </p>
+        </div>
       )}
+      {dataDetail === undefined && <p>Loading...</p>}
     </div>
   );
 }

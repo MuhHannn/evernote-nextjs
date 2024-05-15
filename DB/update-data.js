@@ -1,18 +1,12 @@
-require('dotenv').config({path:'.env.development.local'});
+require("dotenv").config({ path: ".env.development.local" });
 
-const {sql} = require('@vercel/postgres')
+const { sql } = require("@vercel/postgres");
 
-async function execute() {
-
-    try {
-
-        const {rows} = await sql`
-        UPDATE note SET status = 1 WHERE id = 1`
-        console.log(rows)
-    } catch (error) {
-        console.log(error)
-    }
-
+async function execute(title, contain, id) {
+  const result = await sql`
+        UPDATE evernote SET title = ${title}, contain = ${contain} WHERE id = ${id}`;
+  console.log("Berhasil mengupdate data", result);
+  return result;
 }
 
-execute()
+execute("Pengularan barang dagang", "Makanan Kemasan", 2);

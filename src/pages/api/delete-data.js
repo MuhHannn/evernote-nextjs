@@ -14,7 +14,7 @@ export default async function handler(req, res) {
   }
 
   // delete data
-  const resData = await sql`delete from todos_ppqita where id=${id}`;
+  const resData = await sql`delete from evernote where id=${id}`;
 
   // beritahu klo success
   return res.status(200).json({ message: "deleted", data: resData });

@@ -5,15 +5,17 @@ export default function Home() {
 
   const handleAdd = (event) => {
     event.preventDefault();
-    const todo = event.target.todo.value;
+    const title = event.target.title.value;
+    const contain = event.target.contain.value;
 
-    console.log(todo);
+    console.log(title, contain);
 
-    fetch("/api/insert", {
+    fetch("/api/insert-data", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        todo: todo,
+        title: title,
+        contain: contain,
       }),
     })
       .then((res) => res.json())
@@ -31,8 +33,10 @@ export default function Home() {
       <p>Ini Halaman Add Data</p>
       <div>
         <form onSubmit={handleAdd}>
-          <label>Todo: </label>
-          <input name="todo"></input>
+          <label>title: </label>
+          <input name="title"></input>
+          <label>contain: </label>
+          <input name="contain"></input>
           <div>
             <button type="submit">Add Data</button>
           </div>
