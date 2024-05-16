@@ -57,11 +57,11 @@ export default function Home() {
           {showAllData.map((data, index) => {
             return (
               <div key={index} className="flex">
-                <p> {data.id}</p>
-                <p> {data.title}</p>
-                <p> {data.contain}</p>
-                <p> {data.created_at}</p>
-                <p>{data.upload_at}</p>
+                <p>
+                  {" "}
+                  {data.id} {data.title} {" "}
+                  {data.contain}
+                </p>
                 <button
                   onClick={() => {
                     router.push(`/edit/${data.id}`);

@@ -1,0 +1,93 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "evernote",
+    "collectionId": "6dfd0efe-40a7-4cfd-bb8d-512baabb6fe7",
+    "dateExported": "2024-05-16T02:24:00.077Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "57cb8bfe-c983-45db-8fb1-3b91b2b654e6",
+            "colId": "6dfd0efe-40a7-4cfd-bb8d-512baabb6fe7",
+            "containerId": "",
+            "name": "insert-data",
+            "url": "http://localhost:3000/api/insert-data",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-05-15T07:15:43.723Z",
+            "modified": "2024-05-16T02:21:54.493Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"title\": \"Catatan\",\n    \"contain\": \"pelajaran\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "50802f3c-44e3-406e-9b2c-3d60a62bcd13",
+            "colId": "6dfd0efe-40a7-4cfd-bb8d-512baabb6fe7",
+            "containerId": "",
+            "name": "get-detail",
+            "url": "http://localhost:3000/api/get-detail?id=6",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-05-16T02:16:01.835Z",
+            "modified": "2024-05-16T02:22:13.372Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "id",
+                    "value": "6",
+                    "isPath": false
+                }
+            ]
+        },
+        {
+            "_id": "020d658f-2b75-4546-a0db-36ce2d8e56a5",
+            "colId": "6dfd0efe-40a7-4cfd-bb8d-512baabb6fe7",
+            "containerId": "",
+            "name": "get-all",
+            "url": "http://localhost:3000/api/get-all",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-05-16T02:16:10.197Z",
+            "modified": "2024-05-16T02:19:01.468Z",
+            "headers": []
+        },
+        {
+            "_id": "73979335-8eb7-479c-a6e0-061273966fb5",
+            "colId": "6dfd0efe-40a7-4cfd-bb8d-512baabb6fe7",
+            "containerId": "",
+            "name": "update-data",
+            "url": "http://localhost:3000/api/update-data",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2024-05-16T02:16:21.790Z",
+            "modified": "2024-05-16T02:22:26.448Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"id\": 6,\n  \"title\": \"Note\",\n  \"contain\": \"pelajaran\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "e51eccfd-ba7f-4349-9b3c-1ed71e4ff0b2",
+            "colId": "6dfd0efe-40a7-4cfd-bb8d-512baabb6fe7",
+            "containerId": "",
+            "name": "delete-data",
+            "url": "http://localhost:3000/api/delete-data",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2024-05-16T02:16:28.391Z",
+            "modified": "2024-05-16T02:23:14.190Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"id\": 6\n}",
+                "form": []
+            }
+        }
+    ],
+    "ref": "Y_xccUkZ8PunlMutnX1ErIOZshrjmme0gqFSu_CHq6zzGVnixniYm0hnecdFUnFZ3IAi0QFC4KWC9_0y2qNXEA"
+}
