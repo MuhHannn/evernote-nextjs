@@ -40,6 +40,7 @@ export default function Home() {
       .then((res) => res.json())
       .then((data) => {
         alert(data.message);
+        router.push(`/`);
       })
       .catch((data) => {
         alert("error: ", data.message);
@@ -60,6 +61,13 @@ export default function Home() {
             </div>
             <div>
               <button type="submit">Update Data</button>
+              <button
+                onClick={() => {
+                  router.push(`/`);
+                }}
+              >
+                Kembali
+              </button>
             </div>
           </form>
         </div>
