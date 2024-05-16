@@ -48,7 +48,7 @@ export default function Home() {
 
   return (
     <div>
-      {!dataDetail === undefined && <p>Loading...</p>}
+      {dataDetail === undefined && <p>Loading...</p>}
       {dataDetail === null && <p>Data Kosong</p>}
       {dataDetail && (
         <div>

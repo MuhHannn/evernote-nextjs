@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 
 export default function Home() {
   const router = useRouter();
-  const [dataDetail, setDetail] = useState({}); // initialize with an empty object
+  const [dataDetail, setDetail] = useState(); // initialize with an empty object
 
   const { idDetail } = router.query;
 
@@ -16,14 +16,17 @@ export default function Home() {
         console.log(data);
         if (!data.data) {
           setDetail(null);
+          alert("Data tidak ditemukan");
+          router.push(`/`);
         } else {
           setDetail(data.data);
         }
       });
-  }, []); // specify an empty dependency array
+  }, [idDetail]); // specify an empty dependency array
 
   return (
     <div>
+      {dataDetail === undefined && <p>Loading...</p>}
       {dataDetail === null && <p>Data Kosong</p>}
       {dataDetail && (
         <div>
@@ -35,7 +38,6 @@ export default function Home() {
           <p>Updated: {dataDetail.upload_at} </p>
         </div>
       )}
-      {dataDetail === undefined && <p>Loading...</p>}
     </div>
   );
 }
