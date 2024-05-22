@@ -42,7 +42,7 @@ export default function Home() {
 
   return (
     <div>
-      <h1>Halaman Utama</h1>
+      <h1>Evernote</h1>
       <button
         onClick={() => {
           router.push("/add-data");
@@ -59,29 +59,28 @@ export default function Home() {
               <div key={index} className="flex">
                 <p>
                   {" "}
-                  {data.id} {data.title} {" "}
-                  {data.contain}
+                  {data.id} {data.title} {data.contain}
                 </p>
                 <button
                   onClick={() => {
                     router.push(`/edit/${data.id}`);
                   }}
                 >
-                  edit
+                  Edit
                 </button>
                 <button
                   onClick={() => {
                     handleDelete(data.id);
                   }}
                 >
-                  hapus
+                  Hapus
                 </button>
                 <button
                   onClick={() => {
                     router.push(`/detail/${data.id}`);
                   }}
                 >
-                  detail
+                  Detail
                 </button>
               </div>
             );

@@ -1,0 +1,93 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "aplikasi_keuangan",
+    "collectionId": "29d01c09-4fd3-48a0-8abe-2da09650b308",
+    "dateExported": "2024-05-22T01:12:39.959Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "71c6d797-87ef-4883-bd4f-99eaab90a9c1",
+            "colId": "29d01c09-4fd3-48a0-8abe-2da09650b308",
+            "containerId": "",
+            "name": "insert",
+            "url": "http://localhost:3000/api/insert-data",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-05-16T07:05:08.735Z",
+            "modified": "2024-05-22T01:10:53.826Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"keterangan\": \"Beli Gamis\",\n  \"income\": 0,\n  \"outcome\": 1000,\n  \"tanggal\": 12,\n  \"bulan\": 5,\n  \"tahun\": 2024\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "c2c47518-1590-4f4b-b68c-5ab76531c6a3",
+            "colId": "29d01c09-4fd3-48a0-8abe-2da09650b308",
+            "containerId": "",
+            "name": "get-all",
+            "url": "http://localhost:3000/api/get-all",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-05-16T07:07:04.588Z",
+            "modified": "2024-05-16T07:07:19.849Z",
+            "headers": []
+        },
+        {
+            "_id": "d311b9ff-23e2-4b14-ad6e-233181cfa375",
+            "colId": "29d01c09-4fd3-48a0-8abe-2da09650b308",
+            "containerId": "",
+            "name": "update",
+            "url": "http://localhost:3000/api/update-data",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2024-05-16T07:16:48.673Z",
+            "modified": "2024-05-22T01:11:58.624Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"id\": 21,\n  \"keterangan\": \"Beli Jam\",\n  \"income\": 0,\n  \"outcome\": 1200000,\n  \"tanggal\": 12,\n  \"bulan\": 5,\n  \"tahun\": 2024\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "792f905b-1b4a-4b60-a103-ae00c3708cc6",
+            "colId": "29d01c09-4fd3-48a0-8abe-2da09650b308",
+            "containerId": "",
+            "name": "delete",
+            "url": "http://localhost:3000/api/delete-data",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2024-05-16T07:48:36.435Z",
+            "modified": "2024-05-22T01:11:39.874Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"id\": 20\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "b5518f35-8709-4af8-9f3e-48eb23fc5c6f",
+            "colId": "29d01c09-4fd3-48a0-8abe-2da09650b308",
+            "containerId": "",
+            "name": "get-detail",
+            "url": "http://localhost:3000/api/get-detail?id=21",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2024-05-22T01:12:08.624Z",
+            "modified": "2024-05-22T01:12:33.241Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "id",
+                    "value": "21",
+                    "isPath": false
+                }
+            ]
+        }
+    ],
+    "ref": "QIGekQDMBtRPTQViOjQM7oTRCBr0KZvW9ZcmLi7IgdZFdua-wpgtuJu4qWyWzsXdz5ECQq4etQ9EfKpEagpKiQ"
+}
